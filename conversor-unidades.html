@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversor de Unidades Online (km a millas, kg a libras…) | CalculaYa</title>
+<meta name="description" content="Convierte longitud, peso, temperatura, velocidad, área, volumen y tiempo. Km a millas, kg a libras, Celsius a Fahrenheit y mucho más. Gratis e instantáneo.">
+<link rel="canonical" href="https://www.calculaya.com/conversor-unidades.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conversor de Unidades Online | CalculaYa">
+<meta property="og:description" content="Convierte longitud, peso, temperatura, velocidad, área, volumen y tiempo al instante.">
+<meta property="og:url" content="https://www.calculaya.com/conversor-unidades.html">
+<meta property="og:site_name" content="CalculaYa">
+<meta name="theme-color" content="#3f3ff0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233f3ff0'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260821">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Conversor de Unidades", "url": "https://www.calculaya.com/conversor-unidades.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (navegador web)", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "description": "Conversor online gratuito de longitud, peso, temperatura, velocidad, área, volumen y tiempo." }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "¿Cómo se convierten kilómetros a millas?", "acceptedAnswer": { "@type": "Answer", "text": "Se multiplican los kilómetros por 0,621371 para obtener millas. Por ejemplo, 10 km equivalen a 6,21 millas." } },
+  { "@type": "Question", "name": "¿Cómo se convierten grados Celsius a Fahrenheit?", "acceptedAnswer": { "@type": "Answer", "text": "Se multiplica la temperatura en Celsius por 9/5 y se suman 32. Por ejemplo, 20°C equivalen a 68°F." } },
+  { "@type": "Question", "name": "¿Qué categorías de unidades incluye el conversor?", "acceptedAnswer": { "@type": "Answer", "text": "Longitud, peso, temperatura, velocidad, área, volumen y tiempo, cada una con las unidades más comunes." } }
+] }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="calculadoras.html">Calculadoras</a>
+      <a href="convertidores.html" aria-current="page">Conversores</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="calculadoras.html">Calculadoras</a>
+  <a href="convertidores.html">Conversores</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main id="main">
+  <nav class="breadcrumbs container" aria-label="Migas de pan">
+    <ol><li><a href="index.html">Inicio</a></li><li><a href="convertidores.html">Conversores</a></li><li aria-current="page">Unidades</li></ol>
+  </nav>
+
+  <div class="container tool-shell">
+    <div class="tool-layout">
+      <div>
+        <div class="tool-head">
+          <h1>Conversor de unidades</h1>
+          <p class="lede">Convierte longitud, peso, temperatura, velocidad, área, volumen y tiempo entre las unidades más habituales.</p>
+        </div>
+
+        <div class="calc-card" id="calc-conversor-unidades">
+          <noscript><p class="disclaimer">Esta herramienta necesita JavaScript para calcular. Actívalo en tu navegador para usarla.</p></noscript>
+
+          <form class="stack" id="form-unidades">
+            <div class="field">
+              <label for="unit-category">Categoría</label>
+              <select class="input" id="unit-category">
+                <option value="longitud" selected>Longitud</option>
+                <option value="peso">Peso</option>
+                <option value="temperatura">Temperatura</option>
+                <option value="velocidad">Velocidad</option>
+                <option value="area">Área</option>
+                <option value="volumen">Volumen</option>
+                <option value="tiempo">Tiempo</option>
+              </select>
+            </div>
+            <div class="field-grid cols-2">
+              <div class="field">
+                <label for="unit-value">Valor</label>
+                <input class="input" type="number" id="unit-value" inputmode="decimal" step="any" placeholder="10" value="10" required>
+              </div>
+              <div class="field">
+                <label for="unit-from">De</label>
+                <select class="input" id="unit-from"></select>
+              </div>
+            </div>
+            <div class="cluster">
+              <button type="button" class="btn btn-ghost btn-sm" data-action="swap-units" aria-label="Intercambiar unidades">⇅ Intercambiar</button>
+            </div>
+            <div class="field">
+              <label for="unit-to">A</label>
+              <select class="input" id="unit-to"></select>
+            </div>
+            <div class="calc-actions">
+              <button type="submit" class="btn btn-primary">Convertir</button>
+              <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+            </div>
+          </form>
+
+          <div class="error-banner" id="unidades-error-banner" role="alert"></div>
+
+          <div class="result-panel" id="unidades-result" aria-live="polite">
+            <div class="result-label">Resultado</div>
+            <div class="result-value" id="unidades-result-value">—</div>
+            <p class="result-explain" id="unidades-result-explain"></p>
+            <div class="result-actions">
+              <button type="button" class="btn btn-sm btn-soft" data-action="copy">Copiar resultado</button>
+              <span class="copy-feedback">✓ Copiado</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+            100% privado — el cálculo se hace en tu navegador.
+          </p>
+        </div>
+
+        <div class="ad-slot ad-slot-leaderboard" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <div class="prose" data-reveal>
+          <h2>Cómo usar el conversor de unidades</h2>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><p><strong>Elige la categoría</strong> (longitud, peso, temperatura…).</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><p><strong>Introduce el valor</strong> y selecciona la unidad de origen y de destino.</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><p><strong>Pulsa «Convertir»</strong> para ver el resultado al instante. Usa «Intercambiar» para invertir la conversión.</p></div></div>
+          </div>
+
+          <h2>Conversiones más buscadas</h2>
+          <ul>
+            <li><strong>Km a millas:</strong> multiplica por 0,621371.</li>
+            <li><strong>Kg a libras:</strong> multiplica por 2,20462.</li>
+            <li><strong>Celsius a Fahrenheit:</strong> °F = °C × 9/5 + 32.</li>
+            <li><strong>Km/h a mph:</strong> multiplica por 0,621371.</li>
+            <li><strong>Litros a galones (US):</strong> divide entre 3,78541.</li>
+          </ul>
+        </div>
+
+        <div class="ad-slot ad-slot-incontent" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <section aria-labelledby="faq-heading" data-reveal>
+          <h2 id="faq-heading">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Cómo se convierten kilómetros a millas?</summary><div class="faq-answer">Se multiplican los kilómetros por 0,621371 para obtener millas. Por ejemplo, 10 km equivalen a 6,21 millas.</div></details>
+            <details class="faq-item"><summary>¿Cómo se convierten grados Celsius a Fahrenheit?</summary><div class="faq-answer">Se multiplica la temperatura en Celsius por 9/5 y se suman 32. Por ejemplo, 20°C equivalen a 68°F.</div></details>
+            <details class="faq-item"><summary>¿Qué categorías de unidades incluye el conversor?</summary><div class="faq-answer">Longitud, peso, temperatura, velocidad, área, volumen y tiempo, cada una con las unidades más comunes.</div></details>
+          </div>
+        </section>
+
+        <section class="related-tools" aria-labelledby="related-heading" data-reveal>
+          <h2 id="related-heading">Calculadoras relacionadas</h2>
+          <div class="grid-tools">
+            <a class="card tool-card" data-cat="dinero" href="conversor-divisas.html"><span class="tool-icon">💱</span><h3>Conversor de divisas</h3><p>Convierte entre monedas.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="salud" href="calculadora-ritmo-carrera.html"><span class="tool-icon">🏃</span><h3>Ritmo de carrera</h3><p>Calcula ritmo y velocidad.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="salud" href="calculadora-imc.html"><span class="tool-icon">⚖️</span><h3>IMC</h3><p>Calcula tu Índice de Masa Corporal.</p><span class="tool-cta">Calcular →</span></a>
+          </div>
+        </section>
+      </div>
+
+      <aside><div class="ad-slot ad-slot-sidebar ad-sidebar-sticky" aria-label="Espacio publicitario lateral">ANUNCIO<small>Espacio publicitario lateral</small></div></aside>
+    </div>
+  </div>
+</main>
+
+<dialog class="ad-popup" id="ad-popup">
+  <div class="ad-popup-inner">
+    <button class="ad-popup-close" data-action="close-dialog" aria-label="Cerrar anuncio">✕</button>
+    <h3>Gracias por usar CalculaYa</h3>
+    <p class="faint">Este es un espacio publicitario de ejemplo.</p>
+    <div class="ad-slot">ANUNCIO<small>Espacio reservado para Google AdSense</small></div>
+    <button type="button" class="btn btn-ghost btn-block" style="margin-top:1rem" data-action="close-dialog">Cerrar y seguir calculando</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a><p>CalculaYa — Herramientas online gratuitas para tus cálculos diarios.</p></div>
+      <div class="footer-col"><h4>Calculadoras</h4><ul><li><a href="calculadora-porcentajes.html">Porcentajes</a></li><li><a href="calculadora-iva.html">IVA</a></li><li><a href="calculadora-sueldo-neto.html">Sueldo neto</a></li><li><a href="calculadora-imc.html">IMC</a></li><li><a href="calculadoras.html">Ver todas</a></li></ul></div>
+      <div class="footer-col"><h4>Conversores</h4><ul><li><a href="conversor-unidades.html">Unidades</a></li><li><a href="conversor-divisas.html">Divisas</a></li><li><a href="calculadora-dias-entre-fechas.html">Días entre fechas</a></li><li><a href="calculadora-edad.html">Edad</a></li></ul></div>
+      <div class="footer-col"><h4>Compañía</h4><ul><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="herramientas.html">Herramientas</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html">Privacidad</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="terminos.html">Términos y condiciones</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CalculaYa. Todos los derechos reservados.</span><span>Hecho en España</span></div>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="lib/calculators.js"></script>
+<script defer src="main.js?v=20260821"></script>
+</body>
+</html>

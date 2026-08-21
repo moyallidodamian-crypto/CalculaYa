@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Edad Online — ¿Cuántos años tengo? | CalculaYa</title>
+<meta name="description" content="Calcula tu edad exacta en años, meses y días a partir de tu fecha de nacimiento, y descubre cuánto falta para tu próximo cumpleaños. Gratis e instantánea.">
+<link rel="canonical" href="https://www.calculaya.com/calculadora-edad.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Edad Online | CalculaYa">
+<meta property="og:description" content="Descubre tu edad exacta en años, meses y días, y cuándo es tu próximo cumpleaños.">
+<meta property="og:url" content="https://www.calculaya.com/calculadora-edad.html">
+<meta property="og:site_name" content="CalculaYa">
+<meta name="theme-color" content="#3f3ff0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233f3ff0'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260821">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de Edad", "url": "https://www.calculaya.com/calculadora-edad.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (navegador web)", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "description": "Calculadora online gratuita para calcular tu edad exacta a partir de tu fecha de nacimiento." }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "¿Cómo se calcula la edad exacta a partir de la fecha de nacimiento?", "acceptedAnswer": { "@type": "Answer", "text": "Se resta la fecha de nacimiento a la fecha actual, ajustando meses y días cuando el día actual es anterior al día de nacimiento del mes." } },
+  { "@type": "Question", "name": "¿Cómo sé cuántos días faltan para mi próximo cumpleaños?", "acceptedAnswer": { "@type": "Answer", "text": "Se calcula la próxima fecha en la que coinciden el día y el mes de nacimiento con el año actual o siguiente, y se cuentan los días hasta esa fecha." } },
+  { "@type": "Question", "name": "¿La calculadora de edad usa la fecha de mi dispositivo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, toma automáticamente la fecha actual de tu ordenador o móvil para calcular tu edad, sin que tengas que introducirla." } }
+] }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="calculadoras.html" aria-current="page">Calculadoras</a>
+      <a href="convertidores.html">Conversores</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="calculadoras.html">Calculadoras</a>
+  <a href="convertidores.html">Conversores</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main id="main">
+  <nav class="breadcrumbs container" aria-label="Migas de pan">
+    <ol><li><a href="index.html">Inicio</a></li><li><a href="calculadoras.html">Calculadoras</a></li><li aria-current="page">Edad</li></ol>
+  </nav>
+
+  <div class="container tool-shell">
+    <div class="tool-layout">
+      <div>
+        <div class="tool-head">
+          <h1>Calculadora de edad</h1>
+          <p class="lede">Introduce tu fecha de nacimiento y descubre tu edad exacta en años, meses y días, además de cuánto falta para tu próximo cumpleaños.</p>
+        </div>
+
+        <div class="calc-card" id="calc-edad">
+          <noscript><p class="disclaimer">Esta herramienta necesita JavaScript para calcular. Actívalo en tu navegador para usarla.</p></noscript>
+
+          <form class="field-grid" id="form-edad">
+            <div class="field">
+              <label for="edad-birthdate">Fecha de nacimiento</label>
+              <input class="input" type="date" id="edad-birthdate" required>
+              <span class="field-error" id="edad-error">Selecciona una fecha válida (no futura).</span>
+            </div>
+          </form>
+
+          <div class="calc-actions">
+            <button type="submit" form="form-edad" class="btn btn-primary">Calcular edad</button>
+            <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+          </div>
+
+          <div class="error-banner" id="edad-error-banner" role="alert"></div>
+
+          <div class="result-panel" id="edad-result" aria-live="polite">
+            <div class="result-label">Tu edad</div>
+            <div class="result-value" id="edad-result-value">—</div>
+            <div class="result-grid cols-3">
+              <div class="result-stat"><div class="stat-label">Meses adicionales</div><div class="stat-value" id="edad-stat-months">—</div></div>
+              <div class="result-stat"><div class="stat-label">Días adicionales</div><div class="stat-value" id="edad-stat-days">—</div></div>
+              <div class="result-stat"><div class="stat-label">Próximo cumpleaños</div><div class="stat-value" id="edad-stat-next">—</div></div>
+              <div class="result-stat"><div class="stat-label">Días para el cumpleaños</div><div class="stat-value" id="edad-stat-left">—</div></div>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-sm btn-soft" data-action="copy">Copiar resultado</button>
+              <span class="copy-feedback">✓ Copiado</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+            100% privado — tu fecha de nacimiento no sale de tu navegador.
+          </p>
+        </div>
+
+        <div class="ad-slot ad-slot-leaderboard" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <div class="prose" data-reveal>
+          <h2>Cómo usar la calculadora de edad</h2>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><p><strong>Selecciona tu fecha de nacimiento</strong> en el campo de fecha.</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><p><strong>Pulsa «Calcular edad»</strong>.</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><p><strong>Consulta el resultado:</strong> años, meses, días y tu próximo cumpleaños, calculados con la fecha actual de tu dispositivo.</p></div></div>
+          </div>
+
+          <h2>Cómo se calcula la edad</h2>
+          <p>La edad se obtiene restando el año, mes y día de nacimiento al año, mes y día actuales, ajustando el resultado cuando el día o el mes actual todavía no ha llegado al del nacimiento (por ejemplo, si naciste el 20 y hoy es 5, aún no se ha cumplido el mes completo).</p>
+
+          <h2>Ejemplo práctico</h2>
+          <div class="example-box">Si naciste el <strong>15 de marzo de 1990</strong> y hoy es <strong>21 de agosto de 2026</strong>, tu edad es <strong>36 años, 5 meses y 6 días</strong>, y tu próximo cumpleaños será el 15 de marzo de 2027.</div>
+        </div>
+
+        <div class="ad-slot ad-slot-incontent" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <section aria-labelledby="faq-heading" data-reveal>
+          <h2 id="faq-heading">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Cómo se calcula la edad exacta a partir de la fecha de nacimiento?</summary><div class="faq-answer">Se resta la fecha de nacimiento a la fecha actual, ajustando meses y días cuando el día actual es anterior al día de nacimiento del mes.</div></details>
+            <details class="faq-item"><summary>¿Cómo sé cuántos días faltan para mi próximo cumpleaños?</summary><div class="faq-answer">Se calcula la próxima fecha en la que coinciden el día y el mes de nacimiento con el año actual o siguiente, y se cuentan los días hasta esa fecha.</div></details>
+            <details class="faq-item"><summary>¿La calculadora de edad usa la fecha de mi dispositivo?</summary><div class="faq-answer">Sí, toma automáticamente la fecha actual de tu ordenador o móvil para calcular tu edad, sin que tengas que introducirla.</div></details>
+          </div>
+        </section>
+
+        <section class="related-tools" aria-labelledby="related-heading" data-reveal>
+          <h2 id="related-heading">Calculadoras relacionadas</h2>
+          <div class="grid-tools">
+            <a class="card tool-card" data-cat="fechas" href="calculadora-dias-entre-fechas.html"><span class="tool-icon">📅</span><h3>Días entre fechas</h3><p>Cuenta los días entre dos fechas cualquiera.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="salud" href="calculadora-imc.html"><span class="tool-icon">⚖️</span><h3>IMC</h3><p>Calcula tu Índice de Masa Corporal.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="matematicas" href="calculadora-porcentajes.html"><span class="tool-icon">%</span><h3>Porcentajes</h3><p>Calcula porcentajes al instante.</p><span class="tool-cta">Calcular →</span></a>
+          </div>
+        </section>
+      </div>
+
+      <aside><div class="ad-slot ad-slot-sidebar ad-sidebar-sticky" aria-label="Espacio publicitario lateral">ANUNCIO<small>Espacio publicitario lateral</small></div></aside>
+    </div>
+  </div>
+</main>
+
+<dialog class="ad-popup" id="ad-popup">
+  <div class="ad-popup-inner">
+    <button class="ad-popup-close" data-action="close-dialog" aria-label="Cerrar anuncio">✕</button>
+    <h3>Gracias por usar CalculaYa</h3>
+    <p class="faint">Este es un espacio publicitario de ejemplo.</p>
+    <div class="ad-slot">ANUNCIO<small>Espacio reservado para Google AdSense</small></div>
+    <button type="button" class="btn btn-ghost btn-block" style="margin-top:1rem" data-action="close-dialog">Cerrar y seguir calculando</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a><p>CalculaYa — Herramientas online gratuitas para tus cálculos diarios.</p></div>
+      <div class="footer-col"><h4>Calculadoras</h4><ul><li><a href="calculadora-porcentajes.html">Porcentajes</a></li><li><a href="calculadora-iva.html">IVA</a></li><li><a href="calculadora-sueldo-neto.html">Sueldo neto</a></li><li><a href="calculadora-imc.html">IMC</a></li><li><a href="calculadoras.html">Ver todas</a></li></ul></div>
+      <div class="footer-col"><h4>Conversores</h4><ul><li><a href="conversor-unidades.html">Unidades</a></li><li><a href="conversor-divisas.html">Divisas</a></li><li><a href="calculadora-dias-entre-fechas.html">Días entre fechas</a></li><li><a href="calculadora-edad.html">Edad</a></li></ul></div>
+      <div class="footer-col"><h4>Compañía</h4><ul><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="herramientas.html">Herramientas</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html">Privacidad</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="terminos.html">Términos y condiciones</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CalculaYa. Todos los derechos reservados.</span><span>Hecho en España</span></div>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="lib/calculators.js"></script>
+<script defer src="main.js?v=20260821"></script>
+</body>
+</html>

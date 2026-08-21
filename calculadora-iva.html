@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de IVA Online (21%, 10%, 4%) | CalculaYa</title>
+<meta name="description" content="Calculadora de IVA para España: añade o quita el IVA de un precio y calcula cuánto IVA contiene. Tipos 21%, 10%, 4% o personalizado. Gratis e instantánea.">
+<link rel="canonical" href="https://www.calculaya.com/calculadora-iva.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de IVA Online (21%, 10%, 4%) | CalculaYa">
+<meta property="og:description" content="Añade o quita el IVA de cualquier precio. Tipos oficiales de España: 21%, 10%, 4% o personalizado.">
+<meta property="og:url" content="https://www.calculaya.com/calculadora-iva.html">
+<meta property="og:site_name" content="CalculaYa">
+<meta name="theme-color" content="#3f3ff0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233f3ff0'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260821">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de IVA", "url": "https://www.calculaya.com/calculadora-iva.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (navegador web)", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "description": "Calculadora online gratuita para añadir o quitar el IVA de un precio en España." }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "¿Cómo se calcula el IVA de un precio?", "acceptedAnswer": { "@type": "Answer", "text": "Se multiplica el precio sin IVA por el tipo aplicable dividido entre 100. Por ejemplo, el IVA del 21% sobre 100€ es 100 × 0,21 = 21€." } },
+  { "@type": "Question", "name": "¿Cómo se quita el IVA de un precio final?", "acceptedAnswer": { "@type": "Answer", "text": "Se divide el precio con IVA entre (1 + tipo/100). Por ejemplo, un precio de 121€ con IVA del 21% sin IVA es 121 / 1,21 = 100€." } },
+  { "@type": "Question", "name": "¿Cuáles son los tipos de IVA en España?", "acceptedAnswer": { "@type": "Answer", "text": "El tipo general es el 21%, el reducido el 10% (hostelería, transporte, alimentos) y el superreducido el 4% (alimentos básicos, libros, medicamentos)." } },
+  { "@type": "Question", "name": "¿Puedo usar un porcentaje de IVA distinto al de España?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la opción «Personalizado» permite introducir cualquier porcentaje entre 0 y 100, útil para otros países o tipos especiales." } }
+] }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="calculadoras.html" aria-current="page">Calculadoras</a>
+      <a href="convertidores.html">Conversores</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="calculadoras.html">Calculadoras</a>
+  <a href="convertidores.html">Conversores</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main id="main">
+  <nav class="breadcrumbs container" aria-label="Migas de pan">
+    <ol><li><a href="index.html">Inicio</a></li><li><a href="calculadoras.html">Calculadoras</a></li><li aria-current="page">IVA</li></ol>
+  </nav>
+
+  <div class="container tool-shell">
+    <div class="tool-layout">
+      <div>
+        <div class="tool-head">
+          <h1>Calculadora de IVA</h1>
+          <p class="lede">Añade o quita el IVA de un precio con los tipos oficiales de España (21%, 10%, 4%) o uno personalizado. Verás el precio sin IVA, el IVA y el precio final.</p>
+        </div>
+
+        <div class="calc-card" id="calc-iva" data-mode="add">
+          <div class="calc-tabs" role="tablist" aria-label="Operación">
+            <button type="button" class="calc-tab" data-mode="add" aria-selected="true">Añadir IVA</button>
+            <button type="button" class="calc-tab" data-mode="remove" aria-selected="false">Quitar IVA</button>
+          </div>
+
+          <noscript><p class="disclaimer">Esta herramienta necesita JavaScript para calcular. Actívalo en tu navegador para usarla.</p></noscript>
+
+          <form class="stack" id="form-iva">
+            <div class="field">
+              <label id="iva-amount-label" for="iva-amount">Precio sin IVA</label>
+              <div class="input-suffix-wrap">
+                <input class="input" type="number" id="iva-amount" inputmode="decimal" step="any" placeholder="100" required>
+                <span class="input-suffix">€</span>
+              </div>
+              <span class="field-error" id="iva-amount-error">Introduce un precio válido (0 o mayor).</span>
+            </div>
+
+            <div class="field">
+              <label>Tipo de IVA</label>
+              <div class="radio-group">
+                <label class="radio-chip"><input type="radio" name="iva-rate" value="21" checked><span>21% general</span></label>
+                <label class="radio-chip"><input type="radio" name="iva-rate" value="10"><span>10% reducido</span></label>
+                <label class="radio-chip"><input type="radio" name="iva-rate" value="4"><span>4% superreducido</span></label>
+                <label class="radio-chip"><input type="radio" name="iva-rate" value="custom"><span>Personalizado</span></label>
+              </div>
+            </div>
+
+            <div class="field" id="iva-custom-wrap" hidden>
+              <label for="iva-custom">Porcentaje personalizado</label>
+              <div class="input-suffix-wrap">
+                <input class="input" type="number" id="iva-custom" inputmode="decimal" step="any" min="0" max="100" placeholder="15">
+                <span class="input-suffix">%</span>
+              </div>
+            </div>
+          </form>
+
+          <div class="calc-actions">
+            <button type="submit" form="form-iva" class="btn btn-primary">Calcular</button>
+            <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+          </div>
+
+          <div class="error-banner" id="iva-error-banner" role="alert"></div>
+
+          <div class="result-panel" id="iva-result" aria-live="polite">
+            <div class="result-label">Resultado</div>
+            <div class="result-value" id="iva-result-value">—</div>
+            <p class="result-explain" id="iva-result-explain"></p>
+            <div class="result-grid cols-3">
+              <div class="result-stat"><div class="stat-label">Base imponible</div><div class="stat-value" id="iva-stat-base">—</div></div>
+              <div class="result-stat"><div class="stat-label">IVA</div><div class="stat-value" id="iva-stat-vat">—</div></div>
+              <div class="result-stat"><div class="stat-label">Precio final</div><div class="stat-value" id="iva-stat-total">—</div></div>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-sm btn-soft" data-action="copy">Copiar resultado</button>
+              <span class="copy-feedback">✓ Copiado</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+            100% privado — el cálculo se hace en tu navegador, no se envían datos a ningún servidor.
+          </p>
+        </div>
+
+        <div class="ad-slot ad-slot-leaderboard" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <div class="prose" data-reveal>
+          <h2>Cómo usar la calculadora de IVA</h2>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><p><strong>Elige la operación:</strong> añadir IVA a un precio sin IVA, o quitar el IVA de un precio final.</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><p><strong>Introduce el precio</strong> y selecciona el tipo de IVA (21%, 10%, 4% o personalizado).</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><p><strong>Pulsa «Calcular»</strong> y verás la base imponible, el IVA y el precio final desglosados.</p></div></div>
+          </div>
+
+          <h2>Fórmulas utilizadas</h2>
+          <div class="formula-box"><span class="formula-label">Añadir IVA</span>precio final = precio sin IVA × (1 + tipo/100)</div>
+          <div class="formula-box"><span class="formula-label">Quitar IVA</span>precio sin IVA = precio con IVA ÷ (1 + tipo/100)</div>
+
+          <h2>Tipos de IVA vigentes en España</h2>
+          <ul>
+            <li><strong>21% — General:</strong> la mayoría de bienes y servicios.</li>
+            <li><strong>10% — Reducido:</strong> hostelería, transporte de viajeros, alimentos en general, vivienda nueva.</li>
+            <li><strong>4% — Superreducido:</strong> alimentos básicos (pan, leche, fruta), libros, prensa y medicamentos.</li>
+          </ul>
+
+          <h2>Ejemplo práctico</h2>
+          <div class="example-box">Un producto cuesta <strong>100€ sin IVA</strong>. Con el 21% general, el IVA es <strong>21€</strong> y el precio final <strong>121€</strong>. Si en cambio partes de un precio final de <strong>121€</strong> con IVA del 21%, el precio sin IVA es 121 / 1,21 = <strong>100€</strong>.</div>
+        </div>
+
+        <div class="ad-slot ad-slot-incontent" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <section aria-labelledby="faq-heading" data-reveal>
+          <h2 id="faq-heading">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Cómo se calcula el IVA de un precio?</summary><div class="faq-answer">Se multiplica el precio sin IVA por el tipo aplicable dividido entre 100. Por ejemplo, el IVA del 21% sobre 100€ es 100 × 0,21 = 21€.</div></details>
+            <details class="faq-item"><summary>¿Cómo se quita el IVA de un precio final?</summary><div class="faq-answer">Se divide el precio con IVA entre (1 + tipo/100). Por ejemplo, un precio de 121€ con IVA del 21% sin IVA es 121 / 1,21 = 100€.</div></details>
+            <details class="faq-item"><summary>¿Cuáles son los tipos de IVA en España?</summary><div class="faq-answer">El tipo general es el 21%, el reducido el 10% (hostelería, transporte, alimentos) y el superreducido el 4% (alimentos básicos, libros, medicamentos).</div></details>
+            <details class="faq-item"><summary>¿Puedo usar un porcentaje de IVA distinto al de España?</summary><div class="faq-answer">Sí, la opción «Personalizado» permite introducir cualquier porcentaje entre 0 y 100, útil para otros países o tipos especiales.</div></details>
+          </div>
+        </section>
+
+        <section class="related-tools" aria-labelledby="related-heading" data-reveal>
+          <h2 id="related-heading">Calculadoras relacionadas</h2>
+          <div class="grid-tools">
+            <a class="card tool-card" data-cat="matematicas" href="calculadora-porcentajes.html"><span class="tool-icon">%</span><h3>Porcentajes</h3><p>Calcula porcentajes, aumentos y descuentos.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="dinero" href="calculadora-sueldo-neto.html"><span class="tool-icon">💼</span><h3>Sueldo neto</h3><p>De bruto a neto en un vistazo.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="dinero" href="calculadora-interes-compuesto.html"><span class="tool-icon">📈</span><h3>Interés compuesto</h3><p>Simula el crecimiento de tus ahorros.</p><span class="tool-cta">Calcular →</span></a>
+          </div>
+        </section>
+      </div>
+
+      <aside><div class="ad-slot ad-slot-sidebar ad-sidebar-sticky" aria-label="Espacio publicitario lateral">ANUNCIO<small>Espacio publicitario lateral</small></div></aside>
+    </div>
+  </div>
+</main>
+
+<dialog class="ad-popup" id="ad-popup">
+  <div class="ad-popup-inner">
+    <button class="ad-popup-close" data-action="close-dialog" aria-label="Cerrar anuncio">✕</button>
+    <h3>Gracias por usar CalculaYa</h3>
+    <p class="faint">Este es un espacio publicitario de ejemplo.</p>
+    <div class="ad-slot">ANUNCIO<small>Espacio reservado para Google AdSense</small></div>
+    <button type="button" class="btn btn-ghost btn-block" style="margin-top:1rem" data-action="close-dialog">Cerrar y seguir calculando</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a><p>CalculaYa — Herramientas online gratuitas para tus cálculos diarios.</p></div>
+      <div class="footer-col"><h4>Calculadoras</h4><ul><li><a href="calculadora-porcentajes.html">Porcentajes</a></li><li><a href="calculadora-iva.html">IVA</a></li><li><a href="calculadora-sueldo-neto.html">Sueldo neto</a></li><li><a href="calculadora-imc.html">IMC</a></li><li><a href="calculadoras.html">Ver todas</a></li></ul></div>
+      <div class="footer-col"><h4>Conversores</h4><ul><li><a href="conversor-unidades.html">Unidades</a></li><li><a href="conversor-divisas.html">Divisas</a></li><li><a href="calculadora-dias-entre-fechas.html">Días entre fechas</a></li><li><a href="calculadora-edad.html">Edad</a></li></ul></div>
+      <div class="footer-col"><h4>Compañía</h4><ul><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="herramientas.html">Herramientas</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html">Privacidad</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="terminos.html">Términos y condiciones</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CalculaYa. Todos los derechos reservados.</span><span>Hecho en España</span></div>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="lib/calculators.js"></script>
+<script defer src="main.js?v=20260821"></script>
+</body>
+</html>

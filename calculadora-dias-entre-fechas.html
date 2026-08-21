@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Días Entre Fechas Online | CalculaYa</title>
+<meta name="description" content="Calcula los días, semanas, meses y años entre dos fechas, o cuántos días faltan para una fecha concreta. Gratis, instantánea y sin registro.">
+<link rel="canonical" href="https://www.calculaya.com/calculadora-dias-entre-fechas.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Días Entre Fechas | CalculaYa">
+<meta property="og:description" content="Cuenta los días, semanas, meses y años exactos entre dos fechas, o hasta una fecha futura.">
+<meta property="og:url" content="https://www.calculaya.com/calculadora-dias-entre-fechas.html">
+<meta property="og:site_name" content="CalculaYa">
+<meta name="theme-color" content="#3f3ff0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233f3ff0'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260821">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de Días Entre Fechas", "url": "https://www.calculaya.com/calculadora-dias-entre-fechas.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (navegador web)", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "description": "Calculadora online gratuita para contar los días entre dos fechas o hasta una fecha futura." }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "¿Cómo se calculan los días entre dos fechas?", "acceptedAnswer": { "@type": "Answer", "text": "Se resta la fecha inicial a la fecha final, contando el número exacto de días naturales transcurridos entre ambas." } },
+  { "@type": "Question", "name": "¿Los meses y años mostrados son exactos?", "acceptedAnswer": { "@type": "Answer", "text": "Los meses y años se muestran como una aproximación (dividiendo los días totales entre 30,44 y 365,25 respectivamente), ya que los meses tienen distinta duración." } },
+  { "@type": "Question", "name": "¿Puedo calcular cuántos días faltan para una fecha futura?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, en la pestaña «Cuenta atrás» puedes introducir una única fecha y ver cuántos días faltan (o han pasado) desde hoy." } }
+] }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="calculadoras.html" aria-current="page">Calculadoras</a>
+      <a href="convertidores.html">Conversores</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="calculadoras.html">Calculadoras</a>
+  <a href="convertidores.html">Conversores</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main id="main">
+  <nav class="breadcrumbs container" aria-label="Migas de pan">
+    <ol><li><a href="index.html">Inicio</a></li><li><a href="calculadoras.html">Calculadoras</a></li><li aria-current="page">Días entre fechas</li></ol>
+  </nav>
+
+  <div class="container tool-shell">
+    <div class="tool-layout">
+      <div>
+        <div class="tool-head">
+          <h1>Calculadora de días entre fechas</h1>
+          <p class="lede">Cuenta los días, semanas, meses y años entre dos fechas, o descubre cuánto falta para una fecha concreta.</p>
+        </div>
+
+        <div class="calc-card" id="calc-dias" data-mode="between">
+          <div class="calc-tabs" role="tablist" aria-label="Tipo de cálculo">
+            <button type="button" class="calc-tab" data-mode="between" aria-selected="true">Entre dos fechas</button>
+            <button type="button" class="calc-tab" data-mode="until" aria-selected="false">Cuenta atrás a una fecha</button>
+          </div>
+
+          <noscript><p class="disclaimer">Esta herramienta necesita JavaScript para calcular. Actívalo en tu navegador para usarla.</p></noscript>
+
+          <form class="stack" id="form-dias-between">
+            <div class="field-grid cols-2">
+              <div class="field"><label for="dias-start">Fecha inicial</label><input class="input" type="date" id="dias-start" required></div>
+              <div class="field"><label for="dias-end">Fecha final</label><input class="input" type="date" id="dias-end" required></div>
+            </div>
+            <div class="calc-actions">
+              <button type="submit" class="btn btn-primary">Calcular</button>
+              <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+            </div>
+          </form>
+
+          <form class="stack" id="form-dias-until" hidden>
+            <div class="field"><label for="dias-target">Fecha objetivo</label><input class="input" type="date" id="dias-target" required></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn btn-primary">Calcular</button>
+              <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+            </div>
+          </form>
+
+          <div class="error-banner" id="dias-error-banner" role="alert"></div>
+
+          <div class="result-panel" id="dias-result" aria-live="polite">
+            <div class="result-label">Resultado</div>
+            <div class="result-value" id="dias-result-value">—</div>
+            <p class="result-explain" id="dias-result-explain"></p>
+            <div class="result-grid cols-3" id="dias-stat-grid">
+              <div class="result-stat"><div class="stat-label">Semanas</div><div class="stat-value" id="dias-stat-weeks">—</div></div>
+              <div class="result-stat"><div class="stat-label">Meses aprox.</div><div class="stat-value" id="dias-stat-months">—</div></div>
+              <div class="result-stat"><div class="stat-label">Años aprox.</div><div class="stat-value" id="dias-stat-years">—</div></div>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-sm btn-soft" data-action="copy">Copiar resultado</button>
+              <span class="copy-feedback">✓ Copiado</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+            100% privado — el cálculo se hace en tu navegador.
+          </p>
+        </div>
+
+        <div class="ad-slot ad-slot-leaderboard" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <div class="prose" data-reveal>
+          <h2>Cómo usar la calculadora de días entre fechas</h2>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><p><strong>Elige el modo:</strong> «Entre dos fechas» para comparar dos fechas cualquiera, o «Cuenta atrás» para contar desde hoy hasta una fecha futura.</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><p><strong>Selecciona la fecha o fechas</strong> con el selector de calendario.</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><p><strong>Pulsa «Calcular»</strong> y verás el número exacto de días, semanas, meses y años.</p></div></div>
+          </div>
+
+          <h2>Ejemplo práctico</h2>
+          <div class="example-box">Entre el <strong>1 de enero de 2026</strong> y el <strong>21 de agosto de 2026</strong> hay <strong>232 días</strong>, unas 33,1 semanas y aproximadamente 7,6 meses.</div>
+        </div>
+
+        <div class="ad-slot ad-slot-incontent" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <section aria-labelledby="faq-heading" data-reveal>
+          <h2 id="faq-heading">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Cómo se calculan los días entre dos fechas?</summary><div class="faq-answer">Se resta la fecha inicial a la fecha final, contando el número exacto de días naturales transcurridos entre ambas.</div></details>
+            <details class="faq-item"><summary>¿Los meses y años mostrados son exactos?</summary><div class="faq-answer">Los meses y años se muestran como una aproximación (dividiendo los días totales entre 30,44 y 365,25 respectivamente), ya que los meses tienen distinta duración.</div></details>
+            <details class="faq-item"><summary>¿Puedo calcular cuántos días faltan para una fecha futura?</summary><div class="faq-answer">Sí, en la pestaña «Cuenta atrás» puedes introducir una única fecha y ver cuántos días faltan (o han pasado) desde hoy.</div></details>
+          </div>
+        </section>
+
+        <section class="related-tools" aria-labelledby="related-heading" data-reveal>
+          <h2 id="related-heading">Calculadoras relacionadas</h2>
+          <div class="grid-tools">
+            <a class="card tool-card" data-cat="fechas" href="calculadora-edad.html"><span class="tool-icon">🎂</span><h3>Edad</h3><p>Calcula tu edad exacta.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="conversiones" href="conversor-unidades.html"><span class="tool-icon">📏</span><h3>Conversor de unidades</h3><p>Incluye conversión de tiempo.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="matematicas" href="calculadora-porcentajes.html"><span class="tool-icon">%</span><h3>Porcentajes</h3><p>Calcula porcentajes al instante.</p><span class="tool-cta">Calcular →</span></a>
+          </div>
+        </section>
+      </div>
+
+      <aside><div class="ad-slot ad-slot-sidebar ad-sidebar-sticky" aria-label="Espacio publicitario lateral">ANUNCIO<small>Espacio publicitario lateral</small></div></aside>
+    </div>
+  </div>
+</main>
+
+<dialog class="ad-popup" id="ad-popup">
+  <div class="ad-popup-inner">
+    <button class="ad-popup-close" data-action="close-dialog" aria-label="Cerrar anuncio">✕</button>
+    <h3>Gracias por usar CalculaYa</h3>
+    <p class="faint">Este es un espacio publicitario de ejemplo.</p>
+    <div class="ad-slot">ANUNCIO<small>Espacio reservado para Google AdSense</small></div>
+    <button type="button" class="btn btn-ghost btn-block" style="margin-top:1rem" data-action="close-dialog">Cerrar y seguir calculando</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a><p>CalculaYa — Herramientas online gratuitas para tus cálculos diarios.</p></div>
+      <div class="footer-col"><h4>Calculadoras</h4><ul><li><a href="calculadora-porcentajes.html">Porcentajes</a></li><li><a href="calculadora-iva.html">IVA</a></li><li><a href="calculadora-sueldo-neto.html">Sueldo neto</a></li><li><a href="calculadora-imc.html">IMC</a></li><li><a href="calculadoras.html">Ver todas</a></li></ul></div>
+      <div class="footer-col"><h4>Conversores</h4><ul><li><a href="conversor-unidades.html">Unidades</a></li><li><a href="conversor-divisas.html">Divisas</a></li><li><a href="calculadora-dias-entre-fechas.html">Días entre fechas</a></li><li><a href="calculadora-edad.html">Edad</a></li></ul></div>
+      <div class="footer-col"><h4>Compañía</h4><ul><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="herramientas.html">Herramientas</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html">Privacidad</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="terminos.html">Términos y condiciones</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CalculaYa. Todos los derechos reservados.</span><span>Hecho en España</span></div>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="lib/calculators.js"></script>
+<script defer src="main.js?v=20260821"></script>
+</body>
+</html>

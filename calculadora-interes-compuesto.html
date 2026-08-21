@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Interés Compuesto Online | CalculaYa</title>
+<meta name="description" content="Calcula el interés compuesto de tus ahorros o inversiones con aportaciones periódicas. Capital final, beneficio generado y gráfico de evolución. Gratis.">
+<link rel="canonical" href="https://www.calculaya.com/calculadora-interes-compuesto.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Interés Compuesto | CalculaYa">
+<meta property="og:description" content="Simula el crecimiento de tus ahorros e inversiones con aportaciones periódicas y visualiza la evolución en un gráfico.">
+<meta property="og:url" content="https://www.calculaya.com/calculadora-interes-compuesto.html">
+<meta property="og:site_name" content="CalculaYa">
+<meta name="theme-color" content="#3f3ff0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233f3ff0'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260821">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de Interés Compuesto", "url": "https://www.calculaya.com/calculadora-interes-compuesto.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (navegador web)", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "description": "Calculadora online gratuita de interés compuesto con aportaciones periódicas y gráfico de evolución." }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "¿Qué es el interés compuesto?", "acceptedAnswer": { "@type": "Answer", "text": "Es el interés que se calcula sobre el capital inicial y también sobre los intereses ya generados en periodos anteriores, haciendo que el capital crezca de forma acelerada." } },
+  { "@type": "Question", "name": "¿Cómo afectan las aportaciones periódicas al resultado?", "acceptedAnswer": { "@type": "Answer", "text": "Cada aportación se suma al capital y a partir de ese momento también genera intereses, por lo que aportar con más frecuencia (mensual frente a anual) suele producir un capital final ligeramente mayor." } },
+  { "@type": "Question", "name": "¿Esta calculadora tiene en cuenta la inflación o los impuestos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Muestra el crecimiento nominal del capital según la tasa de interés introducida, sin descontar inflación ni fiscalidad, que varían según el producto y el país." } }
+] }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="calculadoras.html" aria-current="page">Calculadoras</a>
+      <a href="convertidores.html">Conversores</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="calculadoras.html">Calculadoras</a>
+  <a href="convertidores.html">Conversores</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main id="main">
+  <nav class="breadcrumbs container" aria-label="Migas de pan">
+    <ol><li><a href="index.html">Inicio</a></li><li><a href="calculadoras.html">Calculadoras</a></li><li aria-current="page">Interés compuesto</li></ol>
+  </nav>
+
+  <div class="container tool-shell">
+    <div class="tool-layout">
+      <div>
+        <div class="tool-head">
+          <h1>Calculadora de interés compuesto</h1>
+          <p class="lede">Simula cómo crecen tus ahorros o inversiones con aportaciones periódicas. Verás el capital aportado, el beneficio generado y un gráfico de evolución.</p>
+        </div>
+
+        <div class="calc-card" id="calc-interes">
+          <noscript><p class="disclaimer">Esta herramienta necesita JavaScript para calcular. Actívalo en tu navegador para usarla.</p></noscript>
+
+          <form class="field-grid cols-2" id="form-interes">
+            <div class="field">
+              <label for="interes-principal">Capital inicial</label>
+              <div class="input-suffix-wrap"><input class="input" type="number" id="interes-principal" inputmode="decimal" step="any" min="0" placeholder="1000" value="1000" required><span class="input-suffix">€</span></div>
+            </div>
+            <div class="field">
+              <label for="interes-contribution">Aportación periódica</label>
+              <div class="input-suffix-wrap"><input class="input" type="number" id="interes-contribution" inputmode="decimal" step="any" min="0" placeholder="100" value="100" required><span class="input-suffix">€</span></div>
+            </div>
+            <div class="field">
+              <label for="interes-frequency">Frecuencia de aportación</label>
+              <select class="input" id="interes-frequency">
+                <option value="mensual" selected>Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="interes-rate">Tasa de interés anual</label>
+              <div class="input-suffix-wrap"><input class="input" type="number" id="interes-rate" inputmode="decimal" step="any" min="0" max="100" placeholder="6" value="6" required><span class="input-suffix">%</span></div>
+            </div>
+            <div class="field">
+              <label for="interes-years">Número de años</label>
+              <input class="input" type="number" id="interes-years" inputmode="decimal" step="any" min="1" max="80" placeholder="10" value="10" required>
+            </div>
+          </form>
+
+          <div class="calc-actions">
+            <button type="submit" form="form-interes" class="btn btn-primary">Calcular</button>
+            <button type="button" class="btn btn-ghost" data-action="reset">Limpiar</button>
+          </div>
+
+          <div class="error-banner" id="interes-error-banner" role="alert"></div>
+
+          <div class="result-panel" id="interes-result" aria-live="polite">
+            <div class="result-label">Capital final estimado</div>
+            <div class="result-value" id="interes-result-value">—</div>
+            <div class="result-grid">
+              <div class="result-stat"><div class="stat-label">Capital aportado</div><div class="stat-value" id="interes-stat-contributed">—</div></div>
+              <div class="result-stat"><div class="stat-label">Beneficio generado</div><div class="stat-value" id="interes-stat-interest">—</div></div>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="interes-chart" width="600" height="260" role="img" aria-label="Gráfico de evolución del capital a lo largo del tiempo"></canvas>
+              <div class="chart-legend">
+                <span><span class="dot" style="background:#3f3ff0"></span>Capital total</span>
+                <span><span class="dot" style="background:#a3a3ba"></span>Capital aportado</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-sm btn-soft" data-action="copy">Copiar resultado</button>
+              <span class="copy-feedback">✓ Copiado</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+            100% privado — el cálculo se hace en tu navegador.
+          </p>
+        </div>
+
+        <div class="ad-slot ad-slot-leaderboard" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <div class="prose" data-reveal>
+          <h2>Cómo usar la calculadora de interés compuesto</h2>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><p><strong>Introduce el capital inicial</strong> y la aportación periódica que planeas hacer.</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><p><strong>Elige la frecuencia</strong> (mensual, trimestral o anual), la tasa de interés anual y el número de años.</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><p><strong>Pulsa «Calcular»</strong> y consulta el capital final, el beneficio generado y el gráfico de evolución.</p></div></div>
+          </div>
+
+          <h2>Fórmula utilizada</h2>
+          <div class="formula-box"><span class="formula-label">Interés compuesto mensual</span>capital(n) = capital(n−1) × (1 + tasa_mensual) [+ aportación si corresponde]</div>
+          <p>La tasa mensual equivalente se obtiene de la tasa anual con <code>(1 + tasa_anual/100)^(1/12) − 1</code>, y el cálculo se repite mes a mes durante todo el periodo, sumando la aportación en los meses que correspondan según la frecuencia elegida.</p>
+
+          <h2>Ejemplo práctico</h2>
+          <div class="example-box">Con un capital inicial de <strong>1.000€</strong>, aportaciones de <strong>100€ al mes</strong>, una tasa anual del <strong>6%</strong> durante <strong>10 años</strong>, el capital aportado total sería de 13.000€ y el capital final —gracias al interés compuesto— sería notablemente mayor.</div>
+        </div>
+
+        <div class="ad-slot ad-slot-incontent" aria-label="Espacio publicitario">ANUNCIO<small>Espacio reservado para publicidad (Google AdSense)</small></div>
+
+        <section aria-labelledby="faq-heading" data-reveal>
+          <h2 id="faq-heading">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Qué es el interés compuesto?</summary><div class="faq-answer">Es el interés que se calcula sobre el capital inicial y también sobre los intereses ya generados en periodos anteriores, haciendo que el capital crezca de forma acelerada.</div></details>
+            <details class="faq-item"><summary>¿Cómo afectan las aportaciones periódicas al resultado?</summary><div class="faq-answer">Cada aportación se suma al capital y a partir de ese momento también genera intereses, por lo que aportar con más frecuencia (mensual frente a anual) suele producir un capital final ligeramente mayor.</div></details>
+            <details class="faq-item"><summary>¿Esta calculadora tiene en cuenta la inflación o los impuestos?</summary><div class="faq-answer">No. Muestra el crecimiento nominal del capital según la tasa de interés introducida, sin descontar inflación ni fiscalidad, que varían según el producto y el país.</div></details>
+          </div>
+        </section>
+
+        <section class="related-tools" aria-labelledby="related-heading" data-reveal>
+          <h2 id="related-heading">Calculadoras relacionadas</h2>
+          <div class="grid-tools">
+            <a class="card tool-card" data-cat="dinero" href="calculadora-sueldo-neto.html"><span class="tool-icon">💼</span><h3>Sueldo neto</h3><p>De bruto a neto en un vistazo.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="dinero" href="conversor-divisas.html"><span class="tool-icon">💱</span><h3>Conversor de divisas</h3><p>Convierte entre monedas.</p><span class="tool-cta">Calcular →</span></a>
+            <a class="card tool-card" data-cat="matematicas" href="calculadora-porcentajes.html"><span class="tool-icon">%</span><h3>Porcentajes</h3><p>Calcula porcentajes al instante.</p><span class="tool-cta">Calcular →</span></a>
+          </div>
+        </section>
+      </div>
+
+      <aside><div class="ad-slot ad-slot-sidebar ad-sidebar-sticky" aria-label="Espacio publicitario lateral">ANUNCIO<small>Espacio publicitario lateral</small></div></aside>
+    </div>
+  </div>
+</main>
+
+<dialog class="ad-popup" id="ad-popup">
+  <div class="ad-popup-inner">
+    <button class="ad-popup-close" data-action="close-dialog" aria-label="Cerrar anuncio">✕</button>
+    <h3>Gracias por usar CalculaYa</h3>
+    <p class="faint">Este es un espacio publicitario de ejemplo.</p>
+    <div class="ad-slot">ANUNCIO<small>Espacio reservado para Google AdSense</small></div>
+    <button type="button" class="btn btn-ghost btn-block" style="margin-top:1rem" data-action="close-dialog">Cerrar y seguir calculando</button>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">C</span>Calcula<span class="brand-ya">Ya</span></a><p>CalculaYa — Herramientas online gratuitas para tus cálculos diarios.</p></div>
+      <div class="footer-col"><h4>Calculadoras</h4><ul><li><a href="calculadora-porcentajes.html">Porcentajes</a></li><li><a href="calculadora-iva.html">IVA</a></li><li><a href="calculadora-sueldo-neto.html">Sueldo neto</a></li><li><a href="calculadora-imc.html">IMC</a></li><li><a href="calculadoras.html">Ver todas</a></li></ul></div>
+      <div class="footer-col"><h4>Conversores</h4><ul><li><a href="conversor-unidades.html">Unidades</a></li><li><a href="conversor-divisas.html">Divisas</a></li><li><a href="calculadora-dias-entre-fechas.html">Días entre fechas</a></li><li><a href="calculadora-edad.html">Edad</a></li></ul></div>
+      <div class="footer-col"><h4>Compañía</h4><ul><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="herramientas.html">Herramientas</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacidad.html">Privacidad</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="terminos.html">Términos y condiciones</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CalculaYa. Todos los derechos reservados.</span><span>Hecho en España</span></div>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js"></script>
+<script defer src="lib/calculators.js"></script>
+<script defer src="main.js?v=20260821"></script>
+</body>
+</html>
