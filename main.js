@@ -140,35 +140,6 @@
   }
 
   /* ---------------------------------------------------------
-     Shared: ad popup (dialog), shown once per session
-     --------------------------------------------------------- */
-  function triggerAdPopupOnce() {
-    try {
-      if (sessionStorage.getItem("calculaya_ad_shown")) return;
-    } catch (e) { /* storage blocked — just skip, non-critical */ return; }
-    var dlg = $("#ad-popup");
-    if (!dlg || typeof dlg.showModal !== "function") return;
-    setTimeout(function () {
-      try {
-        dlg.showModal();
-        sessionStorage.setItem("calculaya_ad_shown", "1");
-      } catch (e) { /* ignore */ }
-    }, 700);
-  }
-  function initAdPopup() {
-    var dlg = $("#ad-popup");
-    if (!dlg) return;
-    $$("[data-action='close-dialog']", dlg).forEach(function (btn) {
-      btn.addEventListener("click", function () { dlg.close(); });
-    });
-    dlg.addEventListener("click", function (e) {
-      var r = dlg.getBoundingClientRect();
-      var inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-      if (!inside) dlg.close();
-    });
-  }
-
-  /* ---------------------------------------------------------
      Shared: result actions (copy / reset) via delegation
      --------------------------------------------------------- */
   function gatherResultText(card) {
@@ -329,7 +300,6 @@
       resultValue.textContent = valueText;
       resultExplain.textContent = explainText;
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -386,7 +356,6 @@
         ? "Precio final = " + Calc.formatCurrency(amount, "EUR") + " × (1 + " + rate + "/100) = " + Calc.formatCurrency(out.total, "EUR") + "."
         : "Precio sin IVA = " + Calc.formatCurrency(amount, "EUR") + " ÷ (1 + " + rate + "/100) = " + Calc.formatCurrency(out.base, "EUR") + ".";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -425,7 +394,6 @@
       statNext.textContent = out.nextBirthday.toLocaleDateString("es-ES", { day: "2-digit", month: "long", year: "numeric" });
       statLeft.textContent = out.daysToNextBirthday + " días";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -519,7 +487,6 @@
       resultPanel.classList.add("is-visible");
       lastHistory = out.history;
       safe(function () { drawGrowthChart(canvas, lastHistory); }, "drawGrowthChart");
-      triggerAdPopupOnce();
     });
 
     var resizeTimer;
@@ -570,7 +537,6 @@
       statNetoAnual.textContent = Calc.formatCurrency(out.netoAnual, "EUR");
       statTipo.textContent = Calc.formatCurrency(out.irpf, "EUR") + "/año";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -605,7 +571,6 @@
       statCategory.textContent = out.category;
       statInterpretation.textContent = out.interpretation;
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -646,7 +611,6 @@
       statMonths.textContent = "≈ " + Calc.formatNumber(Math.abs(out.months), 1) + " meses";
       statYears.textContent = "≈ " + Calc.formatNumber(Math.abs(out.years), 2) + " años";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
 
     formUntil.addEventListener("submit", function (e) {
@@ -659,7 +623,6 @@
       resultValue.textContent = (out.isPast ? "Hace " : "Quedan ") + Calc.formatNumber(Math.abs(out.totalDays), 0) + " días";
       resultExplain.textContent = out.isPast ? "Esa fecha ya pasó." : "Hasta el " + target.toLocaleDateString("es-ES", { day: "2-digit", month: "long", year: "numeric" }) + ".";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -693,7 +656,6 @@
       resultExplain.textContent = "Ritmo = tiempo ÷ distancia = " + Calc.formatDuration(timeSec) + " ÷ " + dist + " km.";
       statSecondary.textContent = Calc.formatNumber(out.speedKmh, 2) + " km/h de velocidad media";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
 
     forms.time.addEventListener("submit", function (e) {
@@ -707,7 +669,6 @@
       resultExplain.textContent = "Tiempo = distancia × ritmo = " + dist + " km × " + Calc.formatPace(paceSec) + ".";
       statSecondary.textContent = Calc.formatNumber(dist / (totalSec / 3600), 2) + " km/h de velocidad media";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
 
     forms.distance.addEventListener("submit", function (e) {
@@ -721,7 +682,6 @@
       resultExplain.textContent = "Distancia = tiempo ÷ ritmo = " + Calc.formatDuration(timeSec) + " ÷ " + Calc.formatPace(paceSec) + ".";
       statSecondary.textContent = Calc.formatNumber(dist / (timeSec / 3600), 2) + " km/h de velocidad media";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -777,7 +737,6 @@
       resultValue.textContent = Calc.formatNumber(result, 4).replace(/,?0+$/, "").replace(/,$/, "") + " " + toSymbol;
       resultExplain.textContent = Calc.formatNumber(val, 4) + " " + fromLabel + " equivalen a " + Calc.formatNumber(result, 4) + " " + toLabel + ".";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -811,7 +770,6 @@
       resultValue.textContent = Calc.formatNumber(result, 2) + " " + toSelect.value;
       resultExplain.textContent = Calc.formatNumber(amount, 2) + " " + fromSelect.value + " ≈ " + Calc.formatNumber(result, 2) + " " + toSelect.value + " (tipo de cambio de demostración).";
       resultPanel.classList.add("is-visible");
-      triggerAdPopupOnce();
     });
   }
 
@@ -823,7 +781,6 @@
     safe(initReveals, "initReveals");
     safe(initSearch, "initSearch");
     safe(initCategoryFilter, "initCategoryFilter");
-    safe(initAdPopup, "initAdPopup");
     safe(initResultActions, "initResultActions");
 
     safe(initPercentCalc, "initPercentCalc");

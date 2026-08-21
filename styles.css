@@ -553,7 +553,6 @@ a.tool-card { display: flex; flex-direction: column; gap: .9rem; height: 100%; }
   .mobile-nav { display: none !important; }
   .grid-tools { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1.4fr repeat(4, 1fr); }
-  .tool-layout { grid-template-columns: minmax(0, 1fr) 300px; }
   .steps { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 1280px) {
